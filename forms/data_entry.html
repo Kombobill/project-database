@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Data Entry</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Enter New Program</h2>
+    <form action="submit_program.php" method="post">
+        <label>Program Name:</label>
+        <input type="text" name="program_name" required><br>
+
+        <label>Description:</label>
+        <textarea name="description"></textarea><br>
+
+        <label>Start Date:</label>
+        <input type="date" name="start_date" required><br>
+
+        <label>End Date:</label>
+        <input type="date" name="end_date"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
