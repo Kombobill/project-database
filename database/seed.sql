@@ -23,6 +23,12 @@ VALUES ('John Doe', 'Supervisor', 1);
 INSERT INTO Reports (ProgramID, ReportDate, SubmittedTo)
 VALUES (1, '2024-03-01', 'Donor, Head Office');
 
+--  Insert Programs
+INSERT INTO Programs (Name, Description, StartDate, EndDate, BudgetID)
+VALUES ('Health Access', 'Provide mobile clinics', '2024-01-01', '2024-12-31', NULL);
+
+
+
 -- View Inserted Data
 SELECT * FROM Donors;
 SELECT * FROM Budgets;

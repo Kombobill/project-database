@@ -87,3 +87,18 @@ CREATE TABLE Reports (
     SubmittedTo TEXT,
     FOREIGN KEY (ProgramID) REFERENCES Programs(ProgramID) ON DELETE CASCADE
 );
+
+-- phase 2 
+
+
+
+-- Add a CHECK constraint to Budgets
+ALTER TABLE Budgets
+ADD CONSTRAINT CHK_Amount_Positive CHECK (Amount > 0);
+
+-- Add DEFAULT to Employees.Role
+ALTER TABLE Employees
+ADD CONSTRAINT DF_Employees_Role DEFAULT 'Staff' FOR Role;
+
+-- Add an INDEX on Program StartDate for performance
+CREATE INDEX IX_Programs_StartDate ON Programs(StartDate);
